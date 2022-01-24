@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "345045294666",
+    "project_id": "oweme-797b9",
+    "storage_bucket": "oweme-797b9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:345045294666:android:2c3812e5cd3dd587e690b3",
+        "android_client_info": {
+          "package_name": "com.example.oweme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "345045294666-u92ornetaupd1kth6k1jnona12odcv3v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK7FO6cAUxbDLri99PJTFsUu-pEwbPJAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "345045294666-u92ornetaupd1kth6k1jnona12odcv3v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

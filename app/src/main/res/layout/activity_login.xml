@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Login">
+
+    <TextView
+        android:id="@+id/TV_welcome"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="90dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Welcome To OweMe"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TV_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/roboto"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_welcome" />
+
+    <EditText
+        android:id="@+id/ET_email"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:ems="10"
+        android:hint="Your email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_email" />
+
+    <TextView
+        android:id="@+id/TV_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_email" />
+
+    <EditText
+        android:id="@+id/ET_password"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_password" />
+
+    <Button
+        android:id="@+id/BTN_createNewAccount"
+        android:layout_width="145dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="login"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:cornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_password" />
+
+    <Button
+        android:id="@+id/BTN_newAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="120dp"
+        android:background="#00FFFFFF"
+        android:fontFamily="@font/roboto"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="toNewAccount"
+        android:text="Create New Account"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTN_createNewAccount" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

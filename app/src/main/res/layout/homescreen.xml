@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_white"
+    android:orientation="horizontal"
+    tools:context=".fragments.HomeScreen">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="122dp"
+        android:background="@drawable/bg_header"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/TV_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Shank Hensem"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:translationX="33dp"
+            android:translationY="12dp" />
+
+        <TextView
+            android:id="@+id/TV_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="RM -120"
+            android:textAlignment="viewStart"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:translationX="33dp"
+            android:translationY="18sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_Bill"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_latestBil" />
+
+    <Button
+        android:id="@+id/BTN_toTransaction"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:drawableRight="@drawable/ic_arrow"
+        android:fontFamily="@font/roboto_bold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Transaction History"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RV_Bill" />
+
+    <Button
+        android:id="@+id/BTN_toPayment"
+        android:layout_width="320dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:drawableRight="@drawable/ic_arrow"
+        android:fontFamily="@font/roboto_bold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="Payment Status"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BTN_toTransaction" />
+
+    <TextView
+        android:id="@+id/TV_latestBil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="22dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Latest Bill"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_addBill"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

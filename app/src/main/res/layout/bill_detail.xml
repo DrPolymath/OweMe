@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pale_white"
+    android:orientation="vertical"
+    tools:context=".fragments.BillDetail">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_header"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TV_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Event"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:translationX="33dp"
+            android:translationY="12dp" />
+
+        <TextView
+            android:id="@+id/TV_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Date"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:translationX="33dp"
+            android:translationY="15dp" />
+
+        <TextView
+            android:id="@+id/TV_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="RM Amount"
+            android:textAlignment="viewStart"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            android:translationX="33dp"
+            android:translationY="20dp" />
+
+        <TextView
+            android:id="@+id/TV_total_debtor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="Total debtors"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:translationX="33dp"
+            android:translationY="25dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_creditor"
+                android:layout_width="320dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Creditor"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:translationX="17dp"
+                    android:translationY="12dp" />
+
+                <TextView
+                    android:id="@+id/tv_creditorName"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:translationX="160dp"
+                    android:translationY="16dp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_debtor"
+                android:layout_width="320dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Debtors"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:translationX="17dp"
+                    android:translationY="12dp" />
+
+                <ListView
+                    android:id="@+id/LV_debtors"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="40dp"
+                    android:scrollbars="none"
+                    android:translationY="40dp" />
+
+                <TextView
+                    android:id="@+id/tv_perPerson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="RM 99 per person"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_pay"
+                android:layout_width="145dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Pay Now"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:cornerRadius="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

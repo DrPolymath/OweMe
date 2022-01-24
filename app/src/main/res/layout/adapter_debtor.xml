@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/tv_debtorName"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Debtor Name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:translationX="37dp"
+        android:translationY="10dp" />
+
+    <TextView
+        android:id="@+id/tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:fontFamily="@font/roboto"
+        android:text="Unpaid"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:translationX="44dp"
+        android:translationY="10dp" />
+
+    <ImageButton
+        android:id="@+id/btn_approve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:backgroundTint="#00F9F131"
+        android:translationX="60dp"
+        app:srcCompat="@drawable/ic_check" />
+</LinearLayout>
