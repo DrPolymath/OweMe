@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/Homescreen">
+    app:startDestination="@id/groupList">
 
     <fragment
         android:id="@+id/Homescreen"
@@ -24,5 +24,26 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/Homescreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupList"
+        android:name="com.example.oweme.fragments.GroupList"
+        android:label="fragment_group_list"
+        tools:layout="@layout/fragment_group_list" >
+        <action
+            android:id="@+id/action_groupList_to_groupMemberList"
+            app:destination="@id/groupMemberList" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupMemberList"
+        android:name="com.example.oweme.fragments.GroupMemberList"
+        android:label="fragment_group_member_list"
+        tools:layout="@layout/fragment_group_member_list" >
+        <action
+            android:id="@+id/action_groupMemberList_to_groupList"
+            app:destination="@id/groupList" />
+        <argument
+            android:name="groupId"
+            app:argType="string" />
     </fragment>
 </navigation>
