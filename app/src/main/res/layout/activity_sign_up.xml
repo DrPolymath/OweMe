@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.SignUp">
@@ -46,24 +51,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TV_email" />
 
+    <EditText
+        android:id="@+id/ET_name"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:ems="10"
+        android:hint="Your name"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_name" />
+
+    <TextView
+        android:id="@+id/TV_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_email" />
+
     <TextView
         android:id="@+id/TV_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/roboto"
         android:text="Password"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ET_email" />
+        app:layout_constraintTop_toBottomOf="@+id/ET_name" />
 
     <EditText
         android:id="@+id/ET_password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="36dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -113,7 +145,8 @@
         android:id="@+id/BTN_createNewAccount"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
         android:fontFamily="@font/roboto"
         android:insetTop="0dp"
         android:insetBottom="0dp"
@@ -125,8 +158,9 @@
         app:cornerRadius="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_phoneNumber" />
 
     <EditText
         android:id="@+id/ET_phoneNumber"
@@ -136,7 +170,16 @@
         android:ems="10"
         android:hint="+60123456789"
         android:inputType="phone"
+        android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TV_confirmPassword2" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

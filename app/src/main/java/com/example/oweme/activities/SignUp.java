@@ -41,6 +41,7 @@ public class SignUp extends AppCompatActivity {
         EditText inputpassword      = findViewById(R.id.ET_password);
         EditText inputconfirmpass   = findViewById(R.id.ET_confirmPassword);
         EditText inputphonenumber   = findViewById(R.id.ET_phoneNumber);
+        EditText inputname          = findViewById(R.id.ET_name);
         Button btnSignUp            = findViewById(R.id.BTN_createNewAccount);
 
         // [START initialize_auth]
@@ -54,9 +55,10 @@ public class SignUp extends AppCompatActivity {
             String strpassword  = inputpassword.getText().toString();
             String strconfirm   = inputconfirmpass.getText().toString();
             String strphonenumber = inputphonenumber.getText().toString();
+            String strname      = inputname.getText().toString();
 
             if(strpassword.equals(strconfirm)){
-                createAccount(stremail, strpassword,strphonenumber);
+                createAccount(stremail, strpassword,strphonenumber, strname);
             }
         });
 
@@ -64,7 +66,7 @@ public class SignUp extends AppCompatActivity {
 
     }
 
-    private void createAccount(String email, String password, String phonenumber) {
+    private void createAccount(String email, String password, String phonenumber, String name) {
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -77,6 +79,7 @@ public class SignUp extends AppCompatActivity {
                             // Adding user information into database
                             Map<String,Object> userinfo = new HashMap<>();
                             userinfo.put("phonenumber", phonenumber);
+                            userinfo.put("name",name);
 
                             DocumentReference documentReference = db.collection("users").document(user.getUid());
                             documentReference.set(userinfo).addOnSuccessListener(new OnSuccessListener<Void>() {
