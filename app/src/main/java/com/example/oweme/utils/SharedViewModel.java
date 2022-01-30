@@ -66,7 +66,7 @@ public class SharedViewModel extends ViewModel {
 
             CollectionReference billsRef = db.collection("bill");
             DocumentReference userRef = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
-            Query billQueryDebtor = billsRef.whereEqualTo("debtor."+userID+".status",false);
+            Query billQueryDebtor = billsRef.whereEqualTo("debtor."+userID+".status","Unpaid");
             Log.d(TAG,FirebaseAuth.getInstance().getCurrentUser().getUid());
             Query billQueryCreditor = billsRef.whereEqualTo("creditor", userRef);
 

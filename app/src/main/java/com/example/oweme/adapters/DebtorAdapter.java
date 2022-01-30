@@ -20,6 +20,7 @@ import com.example.oweme.R;
 import com.example.oweme.models.Debtor;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -33,11 +34,13 @@ public class DebtorAdapter extends BaseAdapter {
     private static final String TAG = "DebtorAdapter";
     private String billId;
     private ArrayList debtorArray;
+    private String creditorId;
 
-    public DebtorAdapter(Map<String,Debtor> debtorMap, String billId) {
+    public DebtorAdapter(Map<String,Debtor> debtorMap, String billId, String creditorId) {
         debtorArray = new ArrayList();
         debtorArray.addAll(debtorMap.entrySet());
         this.billId = billId;
+        this.creditorId = creditorId;
 
     }
 
@@ -74,7 +77,7 @@ public class DebtorAdapter extends BaseAdapter {
         tv_status.setText(debtorStatus);
 
         ImageButton btn_approve = view.findViewById(R.id.btn_approve);
-        if(debtorData.getStatus().equals("Paid")) {
+        if(debtorData.getStatus().equals("Paid") || !FirebaseAuth.getInstance().getCurrentUser().getUid().equals(creditorId)) {
             btn_approve.setEnabled(false);
             btn_approve.setVisibility(view.GONE);
         }

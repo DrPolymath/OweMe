@@ -81,7 +81,7 @@ public class BillDetail extends Fragment {
 
     private void bindingBillDetail(View view){
         mListView = view.findViewById(R.id.LV_debtors);
-        DebtorAdapter mAdapter = new DebtorAdapter(bill.getDebtor(),billId);
+        DebtorAdapter mAdapter = new DebtorAdapter(bill.getDebtor(),billId, bill.getCreditor().getId());
         mListView.setAdapter(mAdapter);
 
         TextView tv_perPerson = view.findViewById(R.id.tv_perPerson);
