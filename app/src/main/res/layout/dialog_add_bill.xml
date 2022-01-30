@@ -67,7 +67,7 @@
             android:translationY="148dp" />
 
         <EditText
-            android:id="@+id/et_amount"
+            android:id="@+id/ET_groupName"
             android:layout_width="270dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"

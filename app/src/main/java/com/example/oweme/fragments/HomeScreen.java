@@ -118,7 +118,7 @@ public class HomeScreen extends Fragment implements CardBillAdapter.OnBillListen
         bindingAccountInfo(view);
 
         // [START RecyclerView]
-        mRecyclerView = view.findViewById(R.id.RV_Bill);
+        mRecyclerView = view.findViewById(R.id.RV_memberList);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false);
         mAdapter = new CardBillAdapter(billList,this);
@@ -159,7 +159,7 @@ public class HomeScreen extends Fragment implements CardBillAdapter.OnBillListen
 
     private void bindingAccountInfo(View view){
         TextView username = view.findViewById(R.id.TV_username);
-        TextView balance = view.findViewById(R.id.TV_balance);
+        TextView balance = view.findViewById(R.id.TV_GroupList_name);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
