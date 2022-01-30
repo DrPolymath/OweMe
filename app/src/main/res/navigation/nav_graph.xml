@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/groupList">
+    app:startDestination="@id/Homescreen">
 
     <fragment
         android:id="@+id/Homescreen"
@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_Homescreen_to_groupList"
+            app:destination="@id/groupList" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"

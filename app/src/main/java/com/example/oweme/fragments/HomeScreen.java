@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -154,6 +155,8 @@ public class HomeScreen extends Fragment implements CardBillAdapter.OnBillListen
             }
         });
 
+        bindingButton(view);
+
 
     }
 
@@ -208,5 +211,16 @@ public class HomeScreen extends Fragment implements CardBillAdapter.OnBillListen
         bundle.putString("id",id);
         NavHostFragment.findNavController(HomeScreen.this)
                 .navigate(R.id.action_FirstFragment_to_SecondFragment,bundle);
+    }
+
+    private void bindingButton(View v){
+        Button btn_toGroupList = v.findViewById(R.id.BTN_toGroupList);
+        btn_toGroupList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(HomeScreen.this)
+                        .navigate(R.id.action_Homescreen_to_groupList);
+            }
+        });
     }
 }
