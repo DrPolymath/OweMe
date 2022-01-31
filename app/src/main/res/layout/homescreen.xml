@@ -31,7 +31,7 @@
             android:translationY="12dp" />
 
         <TextView
-            android:id="@+id/TV_GroupList_name"
+            android:id="@+id/TV_memberList_groupName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_medium"

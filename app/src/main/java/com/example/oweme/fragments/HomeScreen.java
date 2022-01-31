@@ -159,7 +159,7 @@ public class HomeScreen extends Fragment implements CardBillAdapter.OnBillListen
 
     private void bindingAccountInfo(View view){
         TextView username = view.findViewById(R.id.TV_username);
-        TextView balance = view.findViewById(R.id.TV_GroupList_name);
+        TextView balance = view.findViewById(R.id.TV_memberList_groupName);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 

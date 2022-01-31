@@ -23,21 +23,26 @@
         <entry key="..\:/Project/OweMe/app/src/main/res/layout/fragment_second.xml" value="0.36666666666666664" />
         <entry key="..\:/Project/OweMe/app/src/main/res/layout/homescreen.xml" value="0.33" />
         <entry key="..\:/Project/OweMe/app/src/main/res/menu/menu_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/drawable/bg_edit_text.xml" value="0.21875" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/drawable/bottom_border.xml" value="0.37864583333333335" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/drawable/round_button.xml" value="0.37864583333333335" />
+        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/activity_login.xml" value="0.1828125" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/activity_sign_up.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/adapter_debtor.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/bill_detail.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/card_bill.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/card_group.xml" value="0.67" />
+        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/card_member.xml" value="0.33" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/content_main.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/dialog_add_bill.xml" value="0.2957427536231884" />
-        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/dialog_add_group.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/dialog_add_friend.xml" value="0.67" />
+        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/dialog_add_group.xml" value="0.67" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/fragment_group_list.xml" value="0.33" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/fragment_group_list_test.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/fragment_group_member_list.xml" value="0.35833333333333334" />
         <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/homescreen.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/black/AndroidStudioProjects/OweMe/app/src/main/res/layout/member_add_spinner.xml" value="0.67" />
       </map>
     </option>
   </component>

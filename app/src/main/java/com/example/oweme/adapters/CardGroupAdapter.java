@@ -38,17 +38,19 @@ public class CardGroupAdapter extends RecyclerView.Adapter<CardGroupAdapter.Card
             super(view);
             groupNameText = view.findViewById(R.id.TV_groupName);
             btn_groupDetails = view.findViewById((R.id.btn_groupDetails));
+        }
 
+        private void setCardGroupOnClickDetails(String groupId) {
             btn_groupDetails.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Bundle bundle = new Bundle();
-                    bundle.putString("groupId","someId");
+                    bundle.putString("groupId", groupId);
+                    bundle.putString("groupName", groupNameText.getText().toString());
 
                     Navigation.findNavController(itemView).navigate(R.id.action_groupList_to_groupMemberList, bundle);
                 }
             });
-
         }
     }
 
@@ -62,6 +64,7 @@ public class CardGroupAdapter extends RecyclerView.Adapter<CardGroupAdapter.Card
     @Override
     public void onBindViewHolder(@NonNull CardGroupAdapter.CardGroupViewHolder holder, int position) {
         String groupID = groupList.get(position).getGroupName();
+        holder.setCardGroupOnClickDetails(groupID);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         DocumentReference docRef = db.collection("group").document(groupID);

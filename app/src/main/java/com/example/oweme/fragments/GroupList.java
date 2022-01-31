@@ -45,7 +45,6 @@ public class GroupList extends Fragment {
     private ArrayList<Group> groupList;
     private RecyclerView RV_groupList;
 
-    private AlertDialog.Builder db_addGroup;
     private AlertDialog d_addGroup;
 
     public GroupList() {
